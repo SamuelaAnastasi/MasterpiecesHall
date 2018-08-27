@@ -9,11 +9,13 @@ package com.example.android.masterpieceshall.ui.main;
  * Copyright (c) 2018 - Samuela Anastasi
  */
 
+import android.app.ActivityOptions;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.CoordinatorLayout;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.ActionBar;
@@ -178,12 +180,23 @@ public class WorksCollectionActivity extends AppCompatActivity implements
         Bundle bundle = new Bundle();
         bundle.putParcelable(WorkDetailsActivity.CURRENT_ART_OBJECT, artObject);
         detailsIntent.putExtras(bundle);
-        startActivity(detailsIntent);
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+            Bundle transitionBundle = ActivityOptions.makeSceneTransitionAnimation(this).toBundle();
+            startActivity(detailsIntent, transitionBundle);
+        } else {
+            startActivity(detailsIntent);
+        }
     }
 
     public void showAppInfo() {
         Intent intent = new Intent(this, AppInfoActivity.class);
-        startActivity(intent);
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+            Bundle transitionBundle = ActivityOptions.makeSceneTransitionAnimation(this).toBundle();
+            startActivity(intent, transitionBundle);
+        } else {
+            startActivity(intent);
+        }
     }
 
     public void showEvents() {
