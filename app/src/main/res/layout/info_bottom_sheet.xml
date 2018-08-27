@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/bottom_sheet_horizontal_margin"
+    android:layout_marginStart="@dimen/bottom_sheet_horizontal_margin"
+    android:background="@drawable/work_back_shape"
+    android:paddingBottom="@dimen/padding_margin_eight">
+
+    <LinearLayout
+        android:id="@+id/authorRl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sheet_author_height"
+        android:background="@drawable/author_back_shape"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/authorTv"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/sheet_author_height"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/sheet_author_padding_vertical"
+            android:paddingEnd="@dimen/padding_margin_eight"
+            android:paddingStart="@dimen/sheet_title_horizontal_padding"
+            android:paddingTop="@dimen/sheet_author_padding_vertical"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/sheet_author_text_size"
+            tools:text="Jacob Isaacksz van Ruisdael (c. 1628–1682)" />
+
+        <ImageButton
+            android:id="@+id/expandButton"
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="@dimen/expand_button_size"
+            android:layout_height="@dimen/expand_button_size"
+            android:layout_marginEnd="@dimen/sheet_title_horizontal_padding"
+            android:layout_marginTop="@dimen/expand_margin_top"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/cnt_desc_expand_collapse_button"
+            app:srcCompat="@drawable/ic_down_arrow" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="@dimen/width_zero"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccentTransparent"
+        android:fontFamily="@font/dosis_regular"
+        android:paddingBottom="@dimen/sheet_title_padding"
+        android:paddingEnd="@dimen/sheet_title_horizontal_padding"
+        android:paddingLeft="@dimen/sheet_title_horizontal_padding"
+        android:paddingRight="@dimen/sheet_title_horizontal_padding"
+        android:paddingStart="@dimen/sheet_title_horizontal_padding"
+        android:paddingTop="@dimen/sheet_title_padding"
+        android:textSize="@dimen/sheet_tittle_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/authorRl"
+        tools:text="The Windmill at Wijk bij Duurstede" />
+
+    <ImageView
+        android:id="@+id/mediumLabelTv"
+        android:layout_width="@dimen/width_zero"
+        android:layout_height="@dimen/icon_height_32"
+        android:layout_marginStart="@dimen/padding_margin_sixteen"
+        android:layout_marginTop="@dimen/sheet_items_margin_top"
+        android:contentDescription="@string/cnt_desc_medium_icon"
+        app:layout_constraintEnd_toStartOf="@+id/dimensionsLabelTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTv"
+        app:srcCompat="@drawable/ic_painter" />
+
+    <ImageView
+        android:id="@+id/dimensionsLabelTv"
+        android:layout_width="@dimen/width_zero"
+        android:layout_height="@dimen/icon_height_32"
+        android:contentDescription="@string/cnt_desc_dimensions_icon"
+        app:layout_constraintEnd_toEndOf="@+id/dimensionsTv"
+        app:layout_constraintEnd_toStartOf="@+id/periodLabelTv"
+        app:layout_constraintStart_toEndOf="@+id/mediumLabelTv"
+        app:layout_constraintStart_toStartOf="@+id/dimensionsTv"
+        app:layout_constraintTop_toTopOf="@+id/mediumLabelTv"
+        app:srcCompat="@drawable/ic_landscape_image" />
+
+    <ImageView
+        android:id="@+id/periodLabelTv"
+        android:layout_width="@dimen/width_zero"
+        android:layout_height="@dimen/icon_height_32"
+        android:layout_marginEnd="@dimen/padding_margin_sixteen"
+        android:contentDescription="@string/cnt_desc_period_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintStart_toEndOf="@+id/dimensionsLabelTv"
+        app:layout_constraintTop_toTopOf="@+id/mediumLabelTv"
+        app:srcCompat="@drawable/ic_timeline" />
+
+    <TextView
+        android:id="@+id/mediumTv"
+        android:layout_width="@dimen/width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_margin_sixteen"
+        android:layout_marginTop="@dimen/padding_margin_12"
+        android:gravity="top|center_horizontal"
+        android:paddingEnd="@dimen/sheet_text_padding"
+        android:paddingStart="@dimen/sheet_text_padding"
+        android:textSize="@dimen/sheet_info_text_size"
+        app:layout_constraintEnd_toEndOf="@+id/mediumLabelTv"
+        app:layout_constraintEnd_toStartOf="@+id/dimensionsTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mediumLabelTv"
+        tools:text="Oil on canvas" />
+
+    <TextView
+        android:id="@+id/dimensionsTv"
+        android:layout_width="@dimen/width_zero"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="top|center_horizontal"
+        android:maxLines="2"
+        android:minLines="2"
+        android:paddingEnd="@dimen/sheet_text_padding"
+        android:paddingStart="@dimen/sheet_text_padding"
+        android:textSize="@dimen/sheet_info_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/periodTv"
+        app:layout_constraintStart_toEndOf="@+id/mediumTv"
+        app:layout_constraintTop_toTopOf="@+id/mediumTv"
+        tools:text="h 83cm × w 101cm" />
+
+    <TextView
+        android:id="@+id/periodTv"
+        android:layout_width="@dimen/width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/padding_margin_sixteen"
+        android:gravity="top|center_horizontal"
+        android:paddingEnd="@dimen/sheet_text_padding"
+        android:paddingStart="@dimen/sheet_text_padding"
+        android:textSize="@dimen/sheet_info_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dimensionsTv"
+        app:layout_constraintStart_toStartOf="@+id/periodLabelTv"
+        app:layout_constraintTop_toTopOf="@+id/mediumTv"
+        tools:text="c. 1668 - c. 1670" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="@dimen/width_zero"
+        android:layout_height="@dimen/divider_height_2"
+        android:layout_marginEnd="@dimen/sheet_title_horizontal_padding"
+        android:layout_marginStart="@dimen/sheet_title_horizontal_padding"
+        android:layout_marginTop="@dimen/sheet_divider_margin_top"
+        android:background="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mediumTv" />
+
+    <TextView
+        android:id="@+id/descriptionTv"
+        android:layout_width="@dimen/width_zero"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/sheet_title_horizontal_padding"
+        android:layout_marginStart="@dimen/sheet_title_horizontal_padding"
+        android:layout_marginTop="@dimen/sheet_items_margin_top"
+        android:textSize="@dimen/sheet_content_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sodales dictum placerat. Ut volutpat purus sem, ac placerat neque aliquet eu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisl lacus, faucibus et laoreet sed, viverra ut tellus. Sed tortor elit, posuere vitae sapien eget, mattis commodo lectus." />
+
+    <ImageButton
+        android:id="@+id/shareButton"
+        style="?attr/borderlessButtonStyle"
+        android:layout_width="@dimen/share_button_size"
+        android:layout_height="@dimen/share_button_size"
+        android:layout_marginBottom="@dimen/share_margin_bottom"
+        android:layout_marginEnd="@dimen/share_margin_right"
+        android:layout_marginStart="@dimen/padding_margin_eight"
+        android:layout_marginTop="@dimen/sheet_items_margin_top"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/share_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.974"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionTv"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_connections" />
+
+    <View
+        android:id="@+id/adDivider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height_four"
+        android:layout_marginEnd="@dimen/sheet_title_horizontal_padding"
+        android:layout_marginStart="@dimen/sheet_title_horizontal_padding"
+        android:layout_marginTop="@dimen/sheet_items_margin_top"
+        android:background="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shareButton" />
+
+    <LinearLayout
+        android:id="@+id/adContainerLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/adContainerHeight"
+        android:layout_marginTop="@dimen/padding_margin_eight"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adDivider">
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

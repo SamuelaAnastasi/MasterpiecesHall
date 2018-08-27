@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/fav_item_margine_horizontal"
+    android:layout_marginEnd="@dimen/fav_item_margine_horizontal"
+    android:layout_marginBottom="@dimen/favs_container_padding_vertical"
+    android:layout_marginTop="@dimen/favs_container_padding_vertical"
+    android:background="@drawable/work_back_shape">
+
+    <View
+        android:id="@+id/horizontalLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height_2"
+        android:background="@color/transparent_white"
+        android:visibility="visible" />
+
+    <FrameLayout
+        android:id="@+id/imgFl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalLine">
+
+        <ImageView
+            android:id="@+id/headerIv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/cnt_desc_art_work_image"
+            android:scaleType="centerCrop"
+            tools:srcCompat="@drawable/web_image_1" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height_3"
+            android:layout_gravity="bottom"
+            android:layout_marginEnd="@dimen/small_title_margin"
+            android:layout_marginStart="@dimen/small_title_margin"
+            android:background="@color/colorAccentFavorite" />
+
+        <ImageButton
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="@dimen/padding_margin_sixteen"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/cnt_desc_show_more_button"
+            app:srcCompat="@drawable/ic_add_button_white" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/longTitleTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:ellipsize="end"
+        android:fontFamily="@font/dosis_regular"
+        android:gravity="center_vertical"
+        android:maxLines="3"
+        android:minLines="3"
+        android:paddingBottom="@dimen/padding_margin_ten"
+        android:paddingEnd="@dimen/padding_margin_sixteen"
+        android:paddingStart="@dimen/padding_margin_sixteen"
+        android:paddingTop="@dimen/padding_margin_ten"
+        android:textSize="@dimen/small_title_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgFl"
+        tools:text="Portrait of a Couple, Probably Isaac Abrahamsz Massa and Beatrix van der Laen, Frans Hals, c.1622" />
+
+</android.support.constraint.ConstraintLayout>

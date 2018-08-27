@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/no_internet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/error_views_back_color">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/icon_height_48"
+        android:layout_height="@dimen/icon_height_48"
+        android:layout_marginTop="@dimen/details_wifi_margin_top"
+        android:contentDescription="@string/cnt_desc_wifi_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_radio_color" />
+
+    <TextView
+        android:id="@+id/errorMessageTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_margin_sixteen"
+        android:fontFamily="@font/dosis_regular"
+        android:gravity="center"
+        android:text="@string/no_internet_error_message"
+        android:textSize="@dimen/large_error_text_size"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/retryButton"
+        style="?attr/borderlessButtonStyle"
+        android:layout_width="@dimen/retry_button_width"
+        android:layout_height="@dimen/retry_button_height"
+        android:layout_marginBottom="@dimen/padding_margin_24"
+        android:layout_marginTop="@dimen/padding_margin_sixteen"
+        android:background="@color/retry_state_selector"
+        android:paddingEnd="@dimen/padding_margin_32"
+        android:paddingStart="@dimen/padding_margin_32"
+        android:text="@string/retry_label"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/errorMessageTv"
+        app:layout_constraintStart_toStartOf="@+id/errorMessageTv"
+        app:layout_constraintTop_toBottomOf="@+id/errorMessageTv"
+        app:layout_constraintVertical_bias="0.0" />
+</android.support.constraint.ConstraintLayout>

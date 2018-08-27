@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/workInfoCoordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.android.masterpieceshall.ui.info.WorkDetailsActivity">
+
+    <FrameLayout
+        android:id="@+id/workFl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/workIv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <include
+            layout="@layout/no_internet_details"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/toolbar_bg"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:elevation="@dimen/appbar_elevation"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nsv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/sheet_author_height"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="@dimen/sheet_author_height"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        app:layout_collapseMode="pin">
+
+        <include layout="@layout/info_bottom_sheet" />
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/favorite_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/fab_margin_end"
+        android:layout_marginStart="@dimen/fab_margin_end"
+        android:contentDescription="@string/favorite_button"
+        android:scaleType="fitXY"
+        app:backgroundTint="@color/colorFavBackgroundLight"
+        app:elevation="@dimen/toolbar_elevation"
+        app:layout_anchor="@id/bottomSheet"
+        app:layout_anchorGravity="top|end"
+        app:srcCompat="@drawable/ic_favorites_button"
+        app:useCompatPadding="true" />
+
+</android.support.design.widget.CoordinatorLayout>

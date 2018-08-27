@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/no_internet_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/error_views_back_color"
+    android:paddingBottom="@dimen/error_views_padding_vertical"
+    android:paddingEnd="@dimen/error_views_padding_horizontal"
+    android:paddingStart="@dimen/error_views_padding_horizontal"
+    android:paddingTop="@dimen/error_views_padding_top">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/icon_height_48"
+            android:layout_height="@dimen/icon_height_48"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/cnt_desc_wifi_icon"
+            app:srcCompat="@drawable/ic_radio_color" />
+
+        <TextView
+            android:id="@+id/errorMessageTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/padding_margin_sixteen"
+            android:fontFamily="@font/dosis_regular"
+            android:gravity="center"
+            android:text="@string/no_internet_error_message"
+            android:textSize="@dimen/small_title_size" />
+
+        <Button
+            android:id="@+id/retryButton"
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="@dimen/retry_button_width"
+            android:layout_height="@dimen/retry_button_height"
+            android:layout_below="@+id/errorMessageTv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/padding_margin_24"
+            android:layout_marginTop="@dimen/padding_margin_sixteen"
+            android:background="@color/retry_state_selector"
+            android:paddingEnd="@dimen/padding_margin_32"
+            android:paddingStart="@dimen/padding_margin_32"
+            android:text="@string/retry_label" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

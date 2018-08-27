@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/padding_margin_sixteen"
+    android:layout_marginEnd="@dimen/padding_margin_12"
+    android:layout_marginStart="@dimen/padding_margin_12"
+    android:layout_marginTop="@dimen/padding_margin_sixteen"
+    android:background="@drawable/work_back_shape">
+
+    <TextView
+        android:id="@+id/authorTextView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/work_author_height"
+        android:background="@drawable/author_back_shape"
+        android:gravity="center"
+        android:paddingBottom="@dimen/padding_margin_32"
+        android:paddingEnd="@dimen/padding_margin_eight"
+        android:paddingStart="@dimen/padding_margin_eight"
+        android:paddingTop="@dimen/padding_margin_32"
+        android:textAllCaps="true"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/body_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Johannes Vermeer" />
+
+    <ImageView
+        android:id="@+id/workImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/work_image_margin_top"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/cnt_desc_art_work_image"
+        app:layout_constraintEnd_toEndOf="@+id/authorTextView"
+        app:layout_constraintStart_toStartOf="@+id/authorTextView"
+        app:layout_constraintTop_toBottomOf="@+id/authorTextView"
+        tools:srcCompat="@drawable/web_image_2" />
+
+    <ImageView
+        android:id="@+id/moreImageButton"
+        style="?attr/borderlessButtonStyle"
+        android:layout_width="@dimen/icon_height_56"
+        android:layout_height="@dimen/icon_height_56"
+        android:layout_marginEnd="@dimen/padding_margin_eight"
+        android:layout_marginStart="@dimen/padding_margin_eight"
+        android:layout_marginTop="@dimen/padding_margin_24"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/cnt_desc_canvas_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/workImageView"
+        app:srcCompat="@drawable/ic_canvas" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding_margin_sixteen"
+        android:fontFamily="@font/dosis_regular"
+        android:gravity="center"
+        android:paddingEnd="@dimen/padding_margin_sixteen"
+        android:paddingStart="@dimen/padding_margin_sixteen"
+        android:textSize="@dimen/large_title_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/workImageView"
+        app:layout_constraintStart_toStartOf="@+id/workImageView"
+        app:layout_constraintTop_toBottomOf="@+id/moreImageButton"
+        app:layout_constraintVertical_bias="0.018"
+        tools:text="Woman Reading a Letter" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="@dimen/padding_margin_24"
+        android:layout_marginStart="@dimen/padding_margin_24"
+        android:layout_marginTop="@dimen/padding_margin_24"
+        android:background="@color/colorDarkGrey"
+        app:layout_constraintEnd_toEndOf="@+id/workImageView"
+        app:layout_constraintStart_toStartOf="@+id/workImageView"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+    <ImageView
+        android:id="@+id/canvas"
+        android:layout_width="@dimen/icon_height_32"
+        android:layout_height="@dimen/icon_height_32"
+        android:layout_marginTop="@dimen/padding_margin_24"
+        android:contentDescription="@string/cnt_desc_period_icon"
+        app:layout_constraintEnd_toEndOf="@+id/titleTextView"
+        app:layout_constraintStart_toStartOf="@+id/titleTextView"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        app:srcCompat="@drawable/ic_timeline_black" />
+
+    <TextView
+        android:id="@+id/workYeartextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding_margin_32"
+        android:layout_marginTop="@dimen/padding_margin_eight"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center"
+        android:paddingEnd="@dimen/padding_margin_eight"
+        android:paddingStart="@dimen/padding_margin_eight"
+        android:textSize="@dimen/body_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/canvas"
+        app:layout_constraintStart_toStartOf="@+id/canvas"
+        app:layout_constraintTop_toBottomOf="@+id/canvas"
+        tools:text="c. 1663" />
+
+</android.support.constraint.ConstraintLayout>

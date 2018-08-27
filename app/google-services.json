@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "175772774883",
+    "firebase_url": "https://masterpieceshall.firebaseio.com",
+    "project_id": "masterpieceshall",
+    "storage_bucket": "masterpieceshall.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175772774883:android:7d8dc902cbfe25c1",
+        "android_client_info": {
+          "package_name": "com.example.android.masterpieceshall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175772774883-hcj32t3re7ks9mnptr81mrf949dfusqt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkMpL3ufBs2RLdzHrH3bMQxUub5bM56ZA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">MasterpiecesHall</string>
+
+    <!-- Content description strings -->
+    <string name="cnt_desc_art_work_image">art work image</string>
+    <string name="cnt_desc_show_more_button">show more button</string>
+    <string name="cnt_desc_period_icon">period icon</string>
+    <string name="cnt_desc_dimensions_icon">dimensions icon</string>
+    <string name="cnt_desc_medium_icon">medium icon</string>
+    <string name="cnt_desc_expand_collapse_button">expand collapse button</string>
+    <string name="cnt_desc_events_icon">events icon</string>
+    <string name="cnt_desc_widget_image">widget image</string>
+    <string name="cnt_desc_calendar_icon">calendar icon</string>
+    <string name="cnt_desc_clock_icon">clock icon</string>
+    <string name="cnt_desc_canvas_icon">canvas icon</string>
+    <string name="cnt_desc_empty_box_icon">empty box icon</string>
+    <string name="cnt_desc_wifi_icon">wifi icon</string>
+    <string name="cnt_desc_no_data_icon">no data icon</string>
+
+    <string name="favorite_button">favorite button</string>
+    <string name="share_button">share button</string>
+    <string name="learn_more_label">Learn More</string>
+    <string name="retry_label">Retry</string>
+    <string name="action_share">Share Art Work</string>
+
+    <string name="removed_from_favorites">Removed from Favorites</string>
+    <string name="added_to_favorites">Added to Favorites</string>
+
+    <!-- Shared prefs strings for navigation selected option and last visited page -->
+    <string name="pref_option_paintings">Paintings</string>
+    <string name="pref_option_favorites">Favorites</string>
+    <string name="pref_option_figure">Figure</string>
+    <string name="pref_title_paintings">Paintings</string>
+    <string name="pref_title_favorites">My Collection</string>
+    <string name="pref_title_figure">Figures</string>
+
+    <string name="title_events">Events</string>
+
+    <!-- Error strings -->
+    <string name="loader_error">Loader Not Implemented:</string>
+    <string name="toastBrowserMissingError">No browser installed</string>
+    <string name="toastNoInternetError">No internet connection</string>
+    <string name="no_internet_error_message">No internet! Please check your settings and try again.</string>
+    <string name="no_data_error_message">No data found!</string>
+    <string name="no_favorites_yet">No favorites yet!</string>
+
+    <string name="authorUnknown">Author unknown</string>
+    <string name="descriptionNotProvided">Work description not provided</string>
+    <string name="workInfoTitle">Work Info</string>
+    <string name="untitledWork">Untitled work</string>
+    <string name="techniqueNotProvided">Technique not provided</string>
+    <string name="periodUnknown">Period unknown</string>
+    <string name="unknownDimensions">Unknown dimensions</string>
+
+    <string name="appwidget_text">art title</string>
+    <string name="add_widget">Add widget</string>
+    <string name="widgetNoFavorites">No favorites to show</string>
+
+    <string name="admob_app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="banner_home_footer" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="interstitial_full_screen" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="api_credits">This app was developed using the <a href="https://www.rijksmuseum.nl/en/api">Rijksmuseum API</a> and showcases the finest works from Rijksmuseum Collection.</string>
+    <string name="iconCredits">Icons used in this app are taken from <a href="https://www.flaticon.com/">Flaticon</a> and <a href="https://www.freepik.com/">Freepik</a>.</string>
+    <string name="licenseCredits">The project is licensed under the <a href="https://opensource.org/licenses/MIT/">MIT License</a>.</string>
+    <string name="cnt_desc_app_info_icon">app info icon</string>
+    <string name="app_info_title">Masterpieces Hall</string>
+    <string name="app_info_version">Version 1.0</string>
+    <string name="app_info_instructions">Instructions</string>
+    <string name="app_info_instructions_content">Click on any art work to open details screen then single tap to trigger fullscreen, double tap or pinch and drag to zoom and pan the image.\nSave and share your favorite works.</string>
+    <string name="app_info_credits_label">Credits</string>
+    <string name="app_info_copyright_label">Copyright &#38; Licenses</string>
+    <string name="app_info_copyright_content">Copyright © 2018 - Samuela Anastasi</string>
+    <string name="application_info_title">Application Info</string>
+    <string name="events_title">Events</string>
+
+</resources>

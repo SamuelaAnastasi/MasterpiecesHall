@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".ui.info.AppInfoActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:elevation="@dimen/appbar_elevation"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:background="@color/colorBackgroundLight">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            tools:context=".ui.main.InfoFragment"
+            android:padding="@dimen/info_container_padding">
+
+            <LinearLayout
+                android:id="@+id/infoScrollViewLeft"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/info_icon_height"
+                    android:layout_height="@dimen/info_icon_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/info_icon_padding_margin"
+                    android:contentDescription="@string/cnt_desc_app_info_icon"
+                    app:srcCompat="@drawable/ic_nefertiti_bust_color" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dosis_regular"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/info_title_padding_margin"
+                    android:text="@string/app_info_title"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/info_title_size" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dosis_regular"
+                    android:gravity="center_horizontal"
+                    android:text="@string/app_info_version"
+                    android:textSize="@dimen/info_version_size"/>
+
+                <TextView
+                    android:id="@+id/apiCreditsTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding_margin_32"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/dosis_regular"
+                    android:gravity="center_horizontal"
+                    android:linksClickable="true"
+                    android:text="@string/api_credits"
+                    android:textColorLink="@color/colorAccent"
+                    android:textSize="@dimen/info_body_text_size" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height_one"
+                    android:layout_marginBottom="@dimen/padding_margin_sixteen"
+                    android:layout_marginEnd="@dimen/padding_margin_32"
+                    android:layout_marginStart="@dimen/padding_margin_32"
+                    android:layout_marginTop="@dimen/padding_margin_eight"
+                    android:background="@color/colorAccent" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/padding_margin_32"
+                    android:layout_marginStart="@dimen/padding_margin_32"
+                    android:layout_marginTop="@dimen/padding_margin_sixteen"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center_horizontal"
+                    android:text="@string/app_info_credits_label"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/info_credits_label_size" />
+
+                <TextView
+                    android:id="@+id/sourcesCreditsTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/padding_margin_32"
+                    android:layout_marginStart="@dimen/padding_margin_32"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/dosis_regular"
+                    android:gravity="center_horizontal"
+                    android:linksClickable="true"
+                    android:text="@string/iconCredits"
+                    android:textColorLink="@color/colorAccent"
+                    android:textSize="@dimen/info_body_text_size"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/padding_margin_32"
+                    android:layout_marginStart="@dimen/padding_margin_32"
+                    android:layout_marginTop="@dimen/padding_margin_sixteen"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center_horizontal"
+                    android:text="@string/app_info_copyright_label"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/info_credits_label_size" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/padding_margin_32"
+                    android:layout_marginStart="@dimen/padding_margin_32"
+                    android:fontFamily="@font/dosis_regular"
+                    android:gravity="center_horizontal"
+                    android:linksClickable="true"
+                    android:text="@string/app_info_copyright_content"
+                    android:textColorLink="@color/colorAccent"
+                    android:textSize="@dimen/info_body_text_size"/>
+
+                <TextView
+                    android:id="@+id/licenseCreditsTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_margin_64"
+                    android:layout_marginEnd="@dimen/padding_margin_32"
+                    android:layout_marginStart="@dimen/padding_margin_32"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/dosis_regular"
+                    android:gravity="center_horizontal"
+                    android:linksClickable="true"
+                    android:text="@string/licenseCredits"
+                    android:textColorLink="@color/colorAccent"
+                    android:textSize="@dimen/info_body_text_size"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/infoScrollViewRight"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/info_icon_padding_margin"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/padding_margin_32"
+                    android:layout_marginStart="@dimen/padding_margin_32"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center_horizontal"
+                    android:text="@string/app_info_instructions"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/info_body_text_size"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_margin_sixteen"
+                    android:layout_marginEnd="@dimen/padding_margin_32"
+                    android:layout_marginStart="@dimen/padding_margin_32"
+                    android:gravity="center_horizontal"
+                    android:text="@string/app_info_instructions_content"
+                    android:textSize="@dimen/info_body_text_size"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
